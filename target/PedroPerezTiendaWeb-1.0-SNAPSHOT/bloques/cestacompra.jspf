@@ -1,0 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<ul>
+    <c:forEach var="articulo" items="${cestaCompra}">
+        <li>           
+            <a href="DetalleArticulo?articulo=${articulo.idArticulo}">  ${articulo.nombreArticulo} </a>  ${articulo.precioArticulo}   ${articulo.cantidad}  
+            <a href="EliminarArticulosCesta?articulo=${articulo.idArticulo}">Eliminar de la cesta</a>
+        </li>
+    </c:forEach>
+</ul>
